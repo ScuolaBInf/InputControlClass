@@ -38,7 +38,7 @@ class FloatInput : public InputControl
 			bool punto;
 			void SetDot();
 			void DotPrint();
-			inline bool IsDotKey(int);
+			bool IsDotKey(int);
 			void Cancella();
 			
 		public:

@@ -5,6 +5,6 @@ using namespace std;
 
 main() 
 	{
-		InputControl* input = new IntInput;
+		InputControl* input = new FloatInput;
 		cout << endl << input -> Input();
 	}
