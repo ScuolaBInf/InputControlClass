@@ -3,9 +3,9 @@ Namespace:	inp
 Classe:		Int - Derivata da InputControl
 Nome:		Input
 Prototipo:	double Input(int = 6);
-Scopo:		Metodo di input che non permette all'utente di inserire caratteri
-		diversi da numeri, ed il simbolo '-', pertanto, l'input dell'utente
-		sarà strettamente un intero.
+Scopo:		Metodo di input che non permette all'utente di inserire da tastiera
+		caratteri diversi da numeri, ed il simbolo '-', pertanto, l'input 
+		dell'utente, sarà strettamente un intero.
 Parametri:	
 	
 	int = 6: parametro passato per valore che indica il numero massimo di cifre 
@@ -23,9 +23,10 @@ Namespace:	inp
 Classe:		Float - Derivata da InputControl
 Nome:		Input
 Prototipo:	double Input(int = 6);
-Scopo:		Metodo di input che non permette all'utente di inserire caratteri
-		diversi da numeri, il simbolo '-' ed il simbolo '.', pertanto, l'input 
-		dell'utente sarà strettamente o un numero intero, o un numero reale.
+Scopo:		Metodo di input che non permette all'utente di inserire da tastiera 
+		caratteri diversi da numeri, il simbolo '-' ed il simbolo '.', pertanto, 
+		l'input dell'utente, sarà strettamente o un numero intero, o un numero 
+		reale.
 Parametri:	
 	
 	int = 6: parametro passato per valore che indica il numero massimo di cifre 
@@ -33,5 +34,5 @@ Parametri:
 		 dare problemi.
 	
 Return:		Il metodo restituisce un valore "double" contenente il numero intero 
-		digitato dall'utente.
+		o reale digitato dall'utente.
 Eccezioni:	Il metodo non genera eccezioni
