@@ -6,6 +6,6 @@ using namespace inp;
 
 main() 
 	{
-		InputControl* input = new Int;
+		InputControl* input = new Float;
 		cout << endl << input -> Input();
 	}

@@ -11,11 +11,18 @@ namespace inp
 				this -> arrayRisultati = new int[ARRAYRISULTATICONTROL];
 				this -> i = 0;
 				this -> InizializateIntArray(arrayRisultati, ARRAYRISULTATICONTROL);
+				this -> segnoNegativo = false;
 			}
 		
 		void InputControl::Cancella()
 			{
 				return;
+			}
+
+		void InputControl::CancellaSign()
+			{
+				this -> arrayRisultati[this -> i] = 0;
+						this -> i--;
 			}
 			
 		double InputControl::Input(int limiteCifre)
@@ -54,12 +61,27 @@ namespace inp
 			
 		bool InputControl::IsCancelKey()
 			{
-				if (this -> carattereInput == '\b' && this -> i != 0)
+				if ((this -> carattereInput == '\b' && this -> i != 0) || (this -> i == 0 && segnoNegativo == true))
 					return true;
 				else
 					return false;
 			}
 			
+		bool InputControl::IsSignKey()
+			{
+				if (carattereInput == '-' && i == 0)
+					return true;
+				else
+					return false;
+			}
+			
+		void InputControl::SignPrint()
+			{
+				std::cout << '-';
+				if (carattereInput == '-')
+					segnoNegativo = true;			
+			}
+		
 		void InputControl::CalcoloNumero(int i)
 			{
 				int moltiplicatore = 1;
@@ -70,6 +92,8 @@ namespace inp
 						i--;
 					}
 				while (i > 0);
+				if (segnoNegativo == true)
+					numeroOutput*=-1;
 			}
 		
 		bool InputControl::ExitCondition()
@@ -78,5 +102,5 @@ namespace inp
 					return true;
 				else
 					return false;
-			}
+			}		
 	}

@@ -22,6 +22,8 @@ namespace inp
 							Cancella();
 						else if (IsDotKey(limiteCifre))
 							SetDot();
+						else if (IsSignKey())
+							SignPrint();
 					}
 				while (ExitCondition());		
 				CalcoloNumero(this -> i);		
@@ -55,10 +57,9 @@ namespace inp
 				std::cout << '\b' << ' ' << '\b';
 				if (posizionePunto == i && punto == true)
 					punto = false;
+				else if (segnoNegativo && i == 0)
+					segnoNegativo = false;
 				else
-					{
-						this -> arrayRisultati[this -> i] = 0;
-						this -> i--;
-					}		
+					CancellaSign();			
 			}
 	}

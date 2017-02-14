@@ -18,6 +18,8 @@ namespace inp
 							ConvertInSignAndPrint();	
 						else if (IsCancelKey())
 							Cancella();
+						else if (IsSignKey())
+							SignPrint();
 					}
 				while (ExitCondition());
 				CalcoloNumero(this -> i);	
@@ -27,7 +29,9 @@ namespace inp
 		void Int::Cancella()
 			{
 				std::cout << '\b' << ' ' << '\b';
-				this -> arrayRisultati[this -> i] = 0;
-				this -> i--;		
+				if (segnoNegativo && i == 0)
+					segnoNegativo = false;
+				else
+					CancellaSign();
 			}
 	}

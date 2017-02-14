@@ -4,17 +4,20 @@ namespace inp
 			{
 				protected:
 					int i;
-					char carattereInput;
 					int*  arrayRisultati;
+					char carattereInput;
+					bool segnoNegativo;
 					double numeroOutput;
 					
 					void InizializateIntArray(int*, int);
 					void CalcoloNumero(int);
 					void ConvertInSignAndPrint();
-					void CancellaFloat();
+					void CancellaSign();
+					void SignPrint();
 					bool IsFigure();
 					bool LimitSign(int);
 					bool IsCancelKey();
+					bool IsSignKey();
 					bool ExitCondition();
 					virtual void Cancella();
 					
@@ -49,4 +52,3 @@ namespace inp
 					double Input(int = 6);
 			};		
 	}
-
